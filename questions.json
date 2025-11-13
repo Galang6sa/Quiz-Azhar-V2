@@ -1,125 +1,117 @@
 {
-  "title": "Kuis Python: Dictionary Dasar",
+  "title": "Kuis Python Dasar 🐍",
   "questions": [
     {
-      "question": "Apa itu dictionary di Python?",
-      "options": ["Struktur data berisi pasangan kunci dan nilai", "List yang isinya banyak angka", "Fungsi untuk membuat list baru", "Struktur data seperti tuple"],
+      "type": "choice",
+      "question": "Apa itu function di Python?",
+      "options": [
+        "Blok kode yang dapat dipanggil berulang kali",
+        "Tempat menyimpan data",
+        "Jenis data khusus Python", 
+        "Perintah untuk menampilkan output"
+      ],
       "correct": 0,
-      "explanation": "Dictionary menyimpan data dalam bentuk pasangan key dan value."
+      "explanation": "Function adalah blok kode yang dapat dipanggil berulang kali dengan nama tertentu."
     },
     {
-      "question": "Bagaimana cara menampilkan seluruh isi dictionary bernama siswa?",
-      "options": ["print(siswa)", "print(siswa.items)", "print(siswa.all())", "print(siswa.value)"],
+      "type": "dragdrop",
+      "question": "Pasangkan bagian-bagian function dengan definisinya:",
+      "pairs": [
+        {
+          "term": "def",
+          "definition": "Keyword untuk mendefinisikan function"
+        },
+        {
+          "term": "parameter",
+          "definition": "Variabel yang menerima nilai input"
+        },
+        {
+          "term": "print()",
+          "definition": "Menampilkan output ke layar"
+        },
+        {
+          "term": "argumen",
+          "definition": "Nilai aktual yang dikirim ke function"
+        }
+      ],
+      "explanation": "def untuk definisi, parameter menerima input, print() menampilkan output, argumen adalah nilai input."
+    },
+    {
+      "type": "truefalse",
+      "question": "Function di Python harus selalu menggunakan perintah return.",
+      "correct": 1,
+      "explanation": "Salah! Function tidak harus menggunakan return. Banyak function hanya menampilkan output dengan print()."
+    },
+    {
+      "type": "fill",
+      "question": "Lengkapi function untuk menyapa nama:\ndef sapa(nama):\n    print(\"Halo, \" + _____)",
+      "correct": "nama",
+      "explanation": "Parameter 'nama' digunakan untuk menyapa orang yang berbeda-beda."
+    },
+    {
+      "type": "choice",
+      "question": "Apa output dari kode berikut?\ndef tampilkan_angka():\n    print(5 + 3)\ntampilkan_angka()",
+      "options": [
+        "8",
+        "5 + 3",
+        "Error",
+        "tidak ada output"
+      ],
       "correct": 0,
-      "explanation": "Perintah print(siswa) akan menampilkan seluruh isi dictionary dalam format {key: value}."
+      "explanation": "Function menghitung 5 + 3 = 8 dan menampilkan hasilnya menggunakan print()."
     },
     {
-      "question": "Apa hasil dari kode berikut?\nsiswa = {'nama': 'Rafi', 'kelas': 'TJKT'}\nprint(siswa['nama'])",
-      "options": ["nama", "Rafi", "TJKT", "Error"],
-      "correct": 1,
-      "explanation": "Mengakses siswa['nama'] akan menampilkan nilai dari key 'nama', yaitu 'Rafi'."
+      "type": "dragdrop",
+      "question": "Pasangkan function dengan outputnya:",
+      "pairs": [
+        {
+          "term": "def hello(): print('Hello!')",
+          "definition": "Hello!"
+        },
+        {
+          "term": "def wow(): print('Wow!')",
+          "definition": "Wow!"
+        },
+        {
+          "term": "def senyum(): print('😊')",
+          "definition": "😊"
+        },
+        {
+          "term": "def belajar(): print('Ayo belajar!')",
+          "definition": "Ayo belajar!"
+        }
+      ],
+      "explanation": "Setiap function menampilkan output yang berbeda menggunakan print()."
     },
     {
-      "question": "Bagaimana cara menambah item baru pada dictionary bernama siswa?",
-      "options": ["siswa.add('umur', 16)", "siswa['umur'] = 16", "siswa.append({'umur': 16})", "siswa.insert('umur', 16)"],
-      "correct": 1,
-      "explanation": "Item baru dapat ditambahkan dengan cara memberikan key baru, misalnya siswa['umur'] = 16."
-    },
-    {
-      "question": "Apa hasil dari kode berikut?\nsiswa = {'nama': 'Rafi', 'umur': 16}\nsiswa.pop('umur')\nprint(siswa)",
-      "options": ["{'nama': 'Rafi'}", "{'nama': 'Rafi', 'umur': 16}", "Error karena pop tidak bisa digunakan", "{}"],
+      "type": "truefalse", 
+      "question": "Function tanpa return selalu menghasilkan output None.",
       "correct": 0,
-      "explanation": "pop('umur') menghapus item dengan key 'umur', menyisakan {'nama': 'Rafi'}."
+      "explanation": "Benar! Function tanpa return statement akan mengembalikan None secara otomatis."
     },
     {
-      "question": "Fungsi apa yang menampilkan semua pasangan key dan value dari dictionary?",
-      "options": ["pairs()", "items()", "keys()", "values()"],
-      "correct": 1,
-      "explanation": "Metode items() menampilkan semua pasangan key-value dalam bentuk tuple."
+      "type": "fill",
+      "question": "Lengkapi function untuk menampilkan persegi panjang bintang:\ndef persegi_panjang(baris, kolom):\n    for i in range(_____):\n        print('*' * kolom)",
+      "correct": "baris",
+      "explanation": "Parameter 'baris' menentukan berapa kali perulangan for akan dijalankan."
     },
     {
-      "question": "Kode apa yang benar untuk menampilkan semua kunci dari dictionary?",
-      "options": ["print(siswa.keys())", "print(siswa.key())", "print(keys.siswa())", "print(siswa['keys'])"],
+      "type": "choice",
+      "question": "Bagaimana cara membuat function yang menampilkan 'Selamat Datang'?",
+      "options": [
+        "def welcome(): print('Selamat Datang')",
+        "def welcome: print('Selamat Datang')",
+        "def welcome() return 'Selamat Datang'",
+        "function welcome(): print('Selamat Datang')"
+      ],
       "correct": 0,
-      "explanation": "Metode keys() digunakan untuk menampilkan semua kunci dari dictionary."
+      "explanation": "Syntax yang benar: def welcome(): print('Selamat Datang')"
     },
     {
-      "question": "Apa hasil dari kode ini?\nsiswa = {'nama': 'Rafi', 'kelas': 'TJKT'}\nfor key, value in siswa.items():\n    print(key, value)",
-      "options": ["Menampilkan hanya key-nya saja", "Menampilkan key dan value satu per satu", "Menampilkan panjang dictionary", "Error karena tidak bisa for"],
-      "correct": 1,
-      "explanation": "items() memungkinkan kita mengakses key dan value dalam satu perulangan."
-    },
-    {
-      "question": "Bagaimana cara menghapus semua isi dictionary?",
-      "options": ["siswa.clear()", "del siswa", "siswa.remove()", "siswa.delete()"],
-      "correct": 0,
-      "explanation": "clear() akan menghapus semua isi dictionary tanpa menghapus variabelnya."
-    },
-    {
-      "question": "Perintah apa yang digunakan untuk mengetahui jumlah item di dictionary?",
-      "options": ["len(siswa)", "count(siswa)", "size(siswa)", "jumlah(siswa)"],
-      "correct": 0,
-      "explanation": "len() digunakan untuk menghitung jumlah key-value pairs dalam dictionary."
-    },
-    {
-      "question": "Apa hasil dari kode berikut?\nkelas = {'siswa1': {'nama': 'Rafi'}, 'siswa2': {'nama': 'Galang'}}\nprint(kelas['siswa2']['nama'])",
-      "options": ["Rafi", "Galang", "Error", "None"],
-      "correct": 1,
-      "explanation": "kelas['siswa2']['nama'] mengakses nested dictionary dan menampilkan 'Galang'."
-    },
-    {
-      "question": "Kode mana yang benar untuk membuat dictionary kosong?",
-      "options": ["siswa = []", "siswa = {}", "siswa = ()", "siswa = empty{}"],
-      "correct": 1,
-      "explanation": "Dictionary kosong ditulis dengan tanda kurung kurawal {}."
-    },
-    {
-      "question": "Apa fungsi dari metode update() pada dictionary?",
-      "options": ["Menambah atau mengubah pasangan key-value", "Menghapus semua nilai di dictionary", "Menampilkan semua key", "Mengurutkan dictionary"],
-      "correct": 0,
-      "explanation": "update() digunakan untuk menambah atau memperbarui data di dictionary."
-    },
-    {
-      "question": "Apa hasil dari kode berikut?\ndata = {'a': 10, 'b': 20}\nprint(len(data))",
-      "options": ["10", "2", "20", "Error"],
-      "correct": 1,
-      "explanation": "len(data) menghitung jumlah pasangan key-value, hasilnya 2."
-    },
-    {
-      "question": "Bagaimana cara menampilkan semua nilai dari dictionary?",
-      "options": ["siswa.values()", "siswa.value()", "siswa.all()", "siswa.items()"],
-      "correct": 0,
-      "explanation": "values() digunakan untuk menampilkan semua nilai dari dictionary."
-    },
-    {
-      "question": "Jika dictionary berisi key yang sama dua kali, apa yang terjadi?",
-      "options": ["Error karena key tidak boleh sama", "Key terakhir akan menimpa yang sebelumnya", "Keduanya tetap tersimpan", "Python akan acak hasilnya"],
-      "correct": 1,
-      "explanation": "Python hanya menyimpan satu key unik; jika diulang, nilainya akan diganti."
-    },
-    {
-      "question": "Apa hasil dari kode berikut?\nperpus = {'judul': ['Python Dasar', 'AI'], 'stok': [5, 2]}\nprint(perpus['judul'][0])",
-      "options": ["AI", "Python Dasar", "['Python Dasar', 'AI']", "Error"],
-      "correct": 1,
-      "explanation": "Mengakses index ke-0 dari list dalam key 'judul' menghasilkan 'Python Dasar'."
-    },
-    {
-      "question": "Bagaimana cara menampilkan nilai berdasarkan kunci 'kelas'?",
-      "options": ["print(siswa('kelas'))", "print(siswa['kelas'])", "print(siswa.kelas)", "print(get.siswa('kelas'))"],
-      "correct": 1,
-      "explanation": "Nilai dapat diakses menggunakan tanda kurung siku dengan key, contoh: siswa['kelas']."
-    },
-    {
-      "question": "Apa hasil dari kode ini?\nsiswa = {'nama': 'Rafi', 'kelas': 'TJKT'}\nprint('nama' in siswa)",
-      "options": ["True", "False", "Error", "None"],
-      "correct": 0,
-      "explanation": "Operator in memeriksa apakah suatu key ada di dalam dictionary."
-    },
-    {
-      "question": "Jika ingin menyalin dictionary tanpa mengubah aslinya, gunakan:",
-      "options": ["copy()", "clone()", "duplicate()", "mirror()"],
-      "correct": 0,
-      "explanation": "Metode copy() digunakan untuk menyalin dictionary agar tidak memengaruhi data aslinya."
+      "type": "fill",
+      "question": "Lengkapi function untuk menampilkan biodata:\ndef biodata(nama, umur):\n    print(\"Nama:\", _____)\n    print(\"Umur:\", umur)",
+      "correct": "nama",
+      "explanation": "Parameter 'nama' digunakan untuk menampilkan nama dalam biodata."
     }
   ]
 }

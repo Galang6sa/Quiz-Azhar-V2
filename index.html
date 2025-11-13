@@ -10,8 +10,7 @@
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <h1 id="quizTitle">Kuis Interaktif</h1>
-      <p id="quizSubtitle">Uji pengetahuan Anda dengan kuis sederhana</p>
+      <h1 id="quizTitle">Kuis Function</h1>
     </div>
 
     <!-- Progress -->
@@ -24,11 +23,48 @@
 
     <!-- Quiz -->
     <div class="quiz-screen" id="quizScreen">
+      <!-- Timer untuk True/False -->
+      <div class="timer-container" id="timerContainer" style="display: none;">
+        <div class="timer-bar">
+          <div class="timer-progress" id="timerProgress"></div>
+        </div>
+        <div class="timer-text" id="timerText">5</div>
+      </div>
+
       <div class="question-container">
         <div class="question-number" id="questionNumber">Pertanyaan 1</div>
         <div class="question-text" id="questionText">Memuat pertanyaan...</div>
 
+        <!-- Container untuk tipe pertanyaan berbeda -->
         <div class="options-container" id="optionsContainer"></div>
+        
+        <!-- Container untuk Drag & Drop -->
+        <div class="dragdrop-container" id="dragdropContainer" style="display: none;">
+          <div class="dragdrop-instruction">
+            <p>Seret istilah dari kolom kiri ke definisi yang sesuai di kolom kanan</p>
+          </div>
+          <div class="dragdrop-content">
+            <div class="dragdrop-column">
+              <h3>Istilah</h3>
+              <div class="dragdrop-options" id="dragdropOptions"></div>
+            </div>
+            <div class="dragdrop-column">
+              <h3>Definisi</h3>
+              <div class="dragdrop-targets" id="dragdropTargets"></div>
+            </div>
+          </div>
+          <div class="dragdrop-status" id="dragdropStatus">
+            <span id="matchedCount">0</span> dari <span id="totalPairs">0</span> pasangan terisi
+          </div>
+          <div class="dragdrop-reset">
+            <button class="btn btn-secondary" id="resetDragBtn">Reset Semua</button>
+          </div>
+        </div>
+        
+        <!-- Container untuk Fill in the Blank -->
+        <div class="fill-container" id="fillContainer" style="display: none;">
+          <input type="text" id="fillInput" placeholder="Ketik jawaban Anda di sini...">
+        </div>
 
         <div class="answer-feedback" id="answerFeedback">
           <span id="feedbackText"></span>
@@ -41,6 +77,7 @@
       </div>
 
       <div class="navigation">
+        <button class="btn btn-secondary" id="cancelBtn" style="display: none;">Batal</button>
         <button class="btn btn-primary" id="submitBtn">Kirim Jawaban</button>
         <button class="btn btn-secondary" id="nextBtn" style="display: none;">Lanjut</button>
       </div>
@@ -48,7 +85,7 @@
 
     <!-- Hasil -->
     <div class="results-screen" id="resultsScreen">
-      <div class="results-icon" id="resultIcon">🎉</div>
+      <div class="results-icon" id="resultIcon">✓</div>
       <h2>Kuis Selesai!</h2>
       <div class="score" id="finalScore">0/5</div>
       <div class="score-text" id="scoreText">Menghitung hasil...</div>
