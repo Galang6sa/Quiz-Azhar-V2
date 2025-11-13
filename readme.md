@@ -3,7 +3,7 @@
 ## Struktur Dasar
 ```json
 {
-  "title": "Kuis Python Dasar 🐍",
+  "title": "Kuis Python Dasar",
   "questions": [
     {
       "type": "choice",
