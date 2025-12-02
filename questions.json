@@ -1,117 +1,71 @@
 {
-  "title": "Kuis Python Dasar 🐍",
+  "title": "Ulangan Akhir Python Dasar",
   "questions": [
     {
       "type": "choice",
-      "question": "Apa itu function di Python?",
+      "question": "Apa fungsi dari perintah input() dalam Python?",
       "options": [
-        "Blok kode yang dapat dipanggil berulang kali",
-        "Tempat menyimpan data",
-        "Jenis data khusus Python", 
-        "Perintah untuk menampilkan output"
+        "Menampilkan teks ke layar",
+        "Mengambil data dari pengguna",
+        "Menghapus data",
+        "Mengulang perintah"
       ],
-      "correct": 0,
-      "explanation": "Function adalah blok kode yang dapat dipanggil berulang kali dengan nama tertentu."
+      "correct": 1,
+      "explanation": "input() digunakan untuk mengambil nilai yang dimasukkan pengguna melalui keyboard."
     },
     {
-      "type": "dragdrop",
-      "question": "Pasangkan bagian-bagian function dengan definisinya:",
-      "pairs": [
-        {
-          "term": "def",
-          "definition": "Keyword untuk mendefinisikan function"
-        },
-        {
-          "term": "parameter",
-          "definition": "Variabel yang menerima nilai input"
-        },
-        {
-          "term": "print()",
-          "definition": "Menampilkan output ke layar"
-        },
-        {
-          "term": "argumen",
-          "definition": "Nilai aktual yang dikirim ke function"
-        }
+      "type": "fill",
+      "question": "Lengkapi kode untuk menambahkan kontak baru ke list:\nkontak = []\nnama = \"Rafi\"\nnomor = \"08123\"\nkontak.______( {\"nama\": nama, \"nomor\": nomor} )",
+      "correct": "append",
+      "explanation": "append() digunakan untuk menambahkan item baru ke dalam list."
+    },
+    {
+      "type": "choice",
+      "question": "Bagaimana cara mengakses nomor telepon dari dictionary berikut?\nsiswa = {\"nama\": \"Budi\", \"nomor\": \"0812\"}",
+      "options": [
+        "siswa['nomor']",
+        "siswa(nomor)",
+        "siswa[nama]",
+        "siswa.0812"
       ],
-      "explanation": "def untuk definisi, parameter menerima input, print() menampilkan output, argumen adalah nilai input."
+      "correct": 0,
+      "explanation": "Akses dictionary menggunakan key dalam tanda []."
     },
     {
       "type": "truefalse",
-      "question": "Function di Python harus selalu menggunakan perintah return.",
+      "question": "Loop for digunakan untuk mengulang kode sebanyak jumlah data pada list.",
+      "correct": 0,
+      "explanation": "Benar! for biasanya digunakan untuk mengulang setiap item dalam list atau berdasarkan range()."
+    },
+    {
+      "type": "choice",
+      "question": "Apa yang dilakukan function di Python?",
+      "options": [
+        "Mengulang kode tanpa henti",
+        "Menyimpan daftar angka",
+        "Menjalankan blok kode ketika dipanggil",
+        "Menampilkan daftar perintah"
+      ],
+      "correct": 2,
+      "explanation": "Function adalah blok kode yang hanya berjalan jika dipanggil."
+    },
+    {
+      "type": "fill",
+      "question": "Lengkapi potongan program agar if-else bekerja benar:\nif pilihan == '1':\n    print('Tambah kontak')\n_____:\n    print('Pilihan tidak valid')",
+      "correct": "else",
+      "explanation": "else digunakan untuk menangani kondisi selain yang ada pada if."
+    },
+    {
+      "type": "choice",
+      "question": "Apa output dari kode berikut?\ni = 1\nwhile i <= 3:\n    print(i)\n    i += 1",
+      "options": [
+        "1 2",
+        "1 2 3",
+        "2 3 4",
+        "Tidak ada output"
+      ],
       "correct": 1,
-      "explanation": "Salah! Function tidak harus menggunakan return. Banyak function hanya menampilkan output dengan print()."
-    },
-    {
-      "type": "fill",
-      "question": "Lengkapi function untuk menyapa nama:\ndef sapa(nama):\n    print(\"Halo, \" + _____)",
-      "correct": "nama",
-      "explanation": "Parameter 'nama' digunakan untuk menyapa orang yang berbeda-beda."
-    },
-    {
-      "type": "choice",
-      "question": "Apa output dari kode berikut?\ndef tampilkan_angka():\n    print(5 + 3)\ntampilkan_angka()",
-      "options": [
-        "8",
-        "5 + 3",
-        "Error",
-        "tidak ada output"
-      ],
-      "correct": 0,
-      "explanation": "Function menghitung 5 + 3 = 8 dan menampilkan hasilnya menggunakan print()."
-    },
-    {
-      "type": "dragdrop",
-      "question": "Pasangkan function dengan outputnya:",
-      "pairs": [
-        {
-          "term": "def hello(): print('Hello!')",
-          "definition": "Hello!"
-        },
-        {
-          "term": "def wow(): print('Wow!')",
-          "definition": "Wow!"
-        },
-        {
-          "term": "def senyum(): print('😊')",
-          "definition": "😊"
-        },
-        {
-          "term": "def belajar(): print('Ayo belajar!')",
-          "definition": "Ayo belajar!"
-        }
-      ],
-      "explanation": "Setiap function menampilkan output yang berbeda menggunakan print()."
-    },
-    {
-      "type": "truefalse", 
-      "question": "Function tanpa return selalu menghasilkan output None.",
-      "correct": 0,
-      "explanation": "Benar! Function tanpa return statement akan mengembalikan None secara otomatis."
-    },
-    {
-      "type": "fill",
-      "question": "Lengkapi function untuk menampilkan persegi panjang bintang:\ndef persegi_panjang(baris, kolom):\n    for i in range(_____):\n        print('*' * kolom)",
-      "correct": "baris",
-      "explanation": "Parameter 'baris' menentukan berapa kali perulangan for akan dijalankan."
-    },
-    {
-      "type": "choice",
-      "question": "Bagaimana cara membuat function yang menampilkan 'Selamat Datang'?",
-      "options": [
-        "def welcome(): print('Selamat Datang')",
-        "def welcome: print('Selamat Datang')",
-        "def welcome() return 'Selamat Datang'",
-        "function welcome(): print('Selamat Datang')"
-      ],
-      "correct": 0,
-      "explanation": "Syntax yang benar: def welcome(): print('Selamat Datang')"
-    },
-    {
-      "type": "fill",
-      "question": "Lengkapi function untuk menampilkan biodata:\ndef biodata(nama, umur):\n    print(\"Nama:\", _____)\n    print(\"Umur:\", umur)",
-      "correct": "nama",
-      "explanation": "Parameter 'nama' digunakan untuk menampilkan nama dalam biodata."
+      "explanation": "Loop berjalan dari i=1 hingga i=3."
     }
   ]
 }

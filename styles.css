@@ -36,8 +36,8 @@ body {
   width: 100%;
   background: var(--card);
   border-radius: 12px;
-  box-shadow: var(--shadow);
   overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 /* Header */
@@ -210,7 +210,7 @@ body {
   font-size: 0.9rem;
   padding: 8px 12px;
   background: #f8fafc;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   border-left: 3px solid var(--primary);
 }
 
@@ -437,6 +437,7 @@ body {
 .btn-primary {
   background: var(--primary);
   color: white;
+  width: 100%;
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -453,6 +454,7 @@ body {
 .btn-secondary {
   background: #f1f5f9;
   color: var(--text);
+  width: 100%;
 }
 
 .btn-secondary:hover {
@@ -563,6 +565,7 @@ body {
   transform: translateY(-20px);
   transition: all 0.3s ease;
   box-shadow: var(--shadow);
+  align-items: center;
 }
 
 .popup-content.show {
@@ -662,10 +665,7 @@ body {
     padding: 0 20px 20px;
     flex-direction: column;
   }
-  
-  .btn {
-    width: 100%;
-  }
+
   
   .results-screen {
     padding: 32px 20px;
