@@ -1,9 +1,9 @@
 # Panduan Struktur JSON untuk Kuis
 
-##Compatible:
-###Choice
-###True/False
-###Fill
+Compatible:
+Choice
+True/False
+Fill
 
 ## Struktur Dasar
 ```json
