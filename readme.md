@@ -2,8 +2,7 @@
 
 Compatible:
 Choice, 
-True/False, 
-Fill
+True/False
 
 ## Struktur Dasar
 ```json
